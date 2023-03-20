@@ -1,4 +1,10 @@
-def tax_calculator(income):
-    print(income * 0.35)
+from requests import get
 
-tax_calculator(150000000)
+base_url = 'https://weworkremotely.com/remote-jobs/search?term='
+search_term = 'python'
+
+response = get(f'{base_url}{search_term}')
+if response.status_code != 200:
+    print("Can't request website")
+else:
+    print(response.text)
