@@ -16,4 +16,4 @@ def search():
     jobs = indeed + wwr
     return render_template('search.html', keyword=keyword, jobs=jobs)
 
-app.run('127.0.0.1')
+app.run('127.0.0.1', port=5001)
