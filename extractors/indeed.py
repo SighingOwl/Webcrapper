@@ -58,6 +58,3 @@ def extract_indeed_jobs(keyword):
                 }
                 results.append(job_data)
     return results
-
-jobs = extract_indeed_jobs('python')
-print(jobs)
